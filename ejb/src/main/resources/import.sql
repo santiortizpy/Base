@@ -17,3 +17,7 @@
 
 -- You can use this file to load seed data into the database using SQL statements
 insert into Registrant(id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212') 
+insert into Registrant(id, name, email, phone_number) values (1, 'John Toggle', 'john.toggle@mailinator.com', '0981123456') 
+insert into Registrant(id, name, email, phone_number) values (2, 'John Carrie', 'john.carrie@mailinator.com', '0982456789') 
+insert into Registrant(id, name, email, phone_number) values (3, 'John Perfect', 'john.perfect@mailinator.com', '0991654564') 
+insert into Registrant(id, name, email, phone_number) values (4, 'John Bond', 'john.bond@mailinator.com', '0971785623') 
