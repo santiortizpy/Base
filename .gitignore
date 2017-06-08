@@ -1,4 +1,5 @@
 ear/*
 .project
 .settings/
-
+ejb/target/*
+web/taget/*
