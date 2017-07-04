@@ -1,29 +1,29 @@
 {
-  "name": "base",
+  "name": "angular-keycloak-seed",
   "version": "0.0.0",
+  "authors": [
+    "Maximiliano Báez González <maximiliano.baez@konecta.com.py>"
+  ],
+  "description": "Proyecto base angularjs que se integra con keycloak",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "angular": "^1.4.0",
-    "bootstrap": "^3.2.0",
-    "angular-animate": "^1.4.0",
-    "angular-cookies": "^1.4.0",
-    "angular-resource": "^1.4.0",
-    "angular-route": "^1.4.0",
-    "angular-sanitize": "^1.4.0",
-    "angular-touch": "^1.4.0",
-    "angular-bootstrap": "^2.5.0"
+    "ksass": "http://gitlab.konecta.com.py/konecta-public/ksass.git",
+    "ng-tasty": "^0.6.1",
+    "keycloak": "keycloak/keycloak-js-bower#^3.0.0",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "jquery": "^3.2.1",
+    "bootstrap-sass": "^3.3.7"
   },
-  "devDependencies": {
-    "angular-mocks": "^1.4.0"
-  },
-  "appPath": "app",
-  "moduleName": "baseApp",
-  "overrides": {
-    "bootstrap": {
-      "main": [
-        "less/bootstrap.less",
-        "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
-      ]
-    }
+  "resolutions": {
+    "angular": ">1.2.0",
+    "angular-route": "^1.6.4",
+    "jquery": "2.2.4"
   }
 }

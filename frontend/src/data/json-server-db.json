@@ -1,0 +1,81 @@
+{
+  "empresas-paginada": {
+    "count": 2,
+    "rows": [
+      {
+        "id": 1,
+        "fechaCreacion": 1493408348624,
+        "idUsuarioCreacion": null,
+        "usuarioCreacion": null,
+        "fechaModificacion": 1497117312812,
+        "idUsuarioModificacion": 18,
+        "usuarioModificacion": "Rafael Enrique Benegas Castillo",
+        "nombre": "Test",
+        "telefono": 976000000,
+        "direccion": "Test",
+        "activo": true,
+        "ruc": "100-1"
+      },
+      {
+        "id": 8,
+        "fechaCreacion": 1494798326621,
+        "idUsuarioCreacion": 4,
+        "usuarioCreacion": "Maximiliano  Báez",
+        "fechaModificacion": null,
+        "idUsuarioModificacion": null,
+        "usuarioModificacion": null,
+        "nombre": "Konecta S.A.",
+        "telefono": 4964,
+        "direccion": "Sacramento y España",
+        "activo": true,
+        "ruc": "8005747-4"
+      }
+    ]
+  },
+  "empresas": [
+    {
+      "id": 1,
+      "fechaCreacion": 1493408348624,
+      "idUsuarioCreacion": null,
+      "usuarioCreacion": null,
+      "fechaModificacion": 1497117312812,
+      "idUsuarioModificacion": 18,
+      "usuarioModificacion": "Rafael Enrique Benegas Castillo",
+      "nombre": "Test",
+      "telefono": 976000000,
+      "direccion": "Test",
+      "activo": true,
+      "ruc": "100-1"
+    },
+    {
+      "id": 8,
+      "fechaCreacion": 1494798326621,
+      "idUsuarioCreacion": 4,
+      "usuarioCreacion": "Maximiliano  Báez",
+      "fechaModificacion": null,
+      "idUsuarioModificacion": null,
+      "usuarioModificacion": null,
+      "nombre": "Konecta S.A.",
+      "telefono": 4964,
+      "direccion": "Sacramento y España",
+      "activo": true,
+      "ruc": "8005747-4"
+    },
+    {
+      "nombre": "asdasdf",
+      "ruc": "asdfasdf",
+      "telefono": 35634563,
+      "direccion": 24352345,
+      "activo": true,
+      "id": 9
+    },
+    {
+      "nombre": "iuytresdf",
+      "ruc": "sdfsdfsd",
+      "telefono": "sdfsdf",
+      "direccion": "sdfsdf",
+      "activo": true,
+      "id": 10
+    }
+  ]
+}

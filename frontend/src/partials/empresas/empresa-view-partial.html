@@ -1,0 +1,57 @@
+<div>
+    <br/>
+    <div class="wizard">
+        <ul class="wizard-breadcrumbs">
+            <li>
+                <a href="#!/empresas/">Empresas</a>
+            </li>
+            <li class="active">
+                <a>{{recurso.nombre}} <span class="badge">2</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <br/>
+
+    <section class="form-wrapper">
+        <div class="top-block">
+            <h2 class="title-top">Empresa</h2>
+            <p>A través de esta sección usted podrá consultar los datos de una empresa.</p>
+        </div>
+
+        <form class="wrapper form-horizontal" role="form">
+            <dl class="dl-horizontal">
+                <dt>Id:</dt>
+                <dd>
+                    {{recurso.id}}
+                </dd>
+                <dt>Nombre:</dt>
+                <dd>
+                    {{recurso.nombre}}
+                </dd>
+                <dt>Ruc:</dt>
+                <dd>
+                    {{recurso.ruc}}
+                </dd>
+                <dt>Teléfono:</dt>
+                <dd>
+                    {{recurso.telefono}}
+                </dd>
+                <dt>Dirección:</dt>
+                <dd>
+                    {{recurso.direccion}}
+                </dd>
+                <dt>Activo:</dt>
+                <dd>
+                    {{recurso.activo| sino}}
+                </dd>
+            </dl>
+            <hr>
+        </form>
+
+        <hr/>
+        <a href="#!/empresas/" class="btn btn-default">
+            <i class="fa fa-mail-reply" aria-hidden="true"></i> Atras
+        </a>
+    </section>
+</div>

@@ -1,0 +1,38 @@
+// ESTILOS EXTERNOS
+@import "../vendors/ksass/src/scss/variables";
+@import "../vendors/fontawesome/scss/font-awesome";
+@import "../vendors/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../vendors/ksass/src/scss/ksass";
+@import "tasty";
+@import "home";
+.panel[marked] {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 3px;
+}
+.no-data {
+    color: $text_color;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .fa {
+        font-size: 32px;
+    }
+}
+.loading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    img {
+        width: 120px;
+    }
+}
+.navbar-default {
+    .navbar-brand {
+        .fa {
+            font-size: 23px;
+            width: 100%;
+        }
+    }
+}

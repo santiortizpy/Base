@@ -1,0 +1,7 @@
+{
+    "realm": "gfdc",
+    "auth-server-url": "http://desa03.konecta.com.py:8090/auth",
+    "ssl-required": "none",
+    "resource": "angular-keycloak-seed",
+    "public-client": true
+}

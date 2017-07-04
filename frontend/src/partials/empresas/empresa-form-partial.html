@@ -1,0 +1,84 @@
+<div>
+    <br/>
+    <div class="wizard">
+        <ul class="wizard-breadcrumbs">
+            <li>
+                <a href="#!/empresas/">Empresas</a>
+            </li>
+            <li class="active">
+                <a>{{recurso.nombre}} <span class="badge">2</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <br/>
+
+    <section class="form-wrapper">
+        <div class="top-block">
+            <h2 class="title-top">Empresa</h2>
+            <p>A través de esta sección usted podrá gestionar la creación de empresas para la aplicación.</p>
+        </div>
+
+        <section class="wrapper form-horizontal" role="form">
+
+            <div class="form-group" ng-if="!isCrear()">
+                <label class="col-sm-3 control-label">Id:</label>
+                <div class="col-sm-7">
+                    <label class="control-label">{{recurso.id}}</label>
+                    <p class="help-block">Identificador único de la empresa.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre" class="col-sm-3 control-label">Nombre:*</label>
+                <div class="col-sm-7">
+                    <input type="text" ng-model="recurso.nombre" class="form-control" id="nombre">
+                    <p class="help-block">Nombre de la empresa.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ruc" class="col-sm-3 control-label">Ruc:*</label>
+                <div class="col-sm-7">
+                    <input type="text" ng-model="recurso.ruc" class="form-control" id="ruc">
+                    <p class="help-block">Ruc de la empresa.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono" class="col-sm-3 control-label">Teléfono:*</label>
+                <div class="col-sm-7">
+                    <input type="text" ng-model="recurso.telefono" class="form-control" id="telefono">
+                    <p class="help-block">Teléfono de la empresa.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion" class="col-sm-3 control-label">Dirección:*</label>
+                <div class="col-sm-7">
+                    <input type="text" ng-model="recurso.direccion" class="form-control" id="direccion">
+                    <p class="help-block">Dirección de la Empresa.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="activo" class="col-sm-3 control-label">Activo: {{recurso.activo| sino}}</label>
+                <div class="col-sm-7">
+                    <label class="switch">
+                        <input type="checkbox" ng-model="recurso.activo" id="activo">
+                        <div class="slider round"></div>
+                    </label>
+                    <p class="help-block">Estado de la Empresa.</p>
+                </div>
+            </div>
+
+            <hr>
+            <a class="btn btn-primary" ng-click="guardar()"><i class="fa fa-floppy-o"></i>&nbsp;Guardar</a>
+        </section>
+
+        <hr/>
+        <a href="#!/empresas/" class="btn btn-default">
+            <i class="fa fa-mail-reply" aria-hidden="true"></i> Atras
+        </a>
+    </section>
+</div>

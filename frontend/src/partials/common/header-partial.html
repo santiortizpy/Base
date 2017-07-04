@@ -1,0 +1,31 @@
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#!/">
+        <i class="fa fa-gitlab"></i>
+    </a>
+</div>
+
+<!-- Top Menu Items -->
+<ul class="nav navbar-right top-nav hidden-xs">
+    <li class="dropdown" ng-if="user != null">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user-circle-o"></i> {{user.name}} <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a ng-click="logout()"><i class="fa fa-fw fa-power-off"></i> Salir</a>
+            </li>
+        </ul>
+    </li>
+
+    <li ng-if="user == null">
+        <a ng-click="login()">
+            <i class="fa fa-user-circle-o"></i> Ingresar
+        </a>
+    </li>
+</ul>

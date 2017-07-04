@@ -1,0 +1,79 @@
+<div class="col-md-12">
+    <br/>
+    <div class="wizard">
+        <ul class="wizard-breadcrumbs">
+            <li class="active">
+                <a>Empresas <span class="badge">1</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <br/>
+
+    <nav class="col-md-3 ">
+        <div class="form-wrapper">
+            <div class="top-block">
+                <h2 class="title-top ">Filtros</h2>
+                <p>Criterios de búsqueda.</p>
+            </div>
+            <div class="form">
+                <div class="form-group">
+                    <label class="control-label">Nombre:</label>
+                    <input type="text" class="form-control" ng-model="filterBy.nombre" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Ruc:</label>
+                    <input type="text" class="form-control" ng-model="filterBy.ruc" />
+                </div>
+                <hr/>
+                <a class="btn btn-default" ng-click="limpiar()"><i class="fa fa-ban"></i>&nbsp;Limpiar</a>
+            </div>
+        </div>
+    </nav>
+    <section class="col-md-9 ">
+        <section class="form-wrapper">
+            <div class="top-block">
+                <h2 class="title-top ">Empresas</h2>
+                <p>A través de esta sección usted podrá realizar consultar la lista de las empresas registradas.</p>
+            </div>
+            <div class="wrapper table-responsive" tasty-table bind-resource-callback="getResource " bind-init="init " bind-filters="filterBy ">
+                <table class="table table-striped ">
+                    <thead tasty-thead></thead>
+                    <tbody ng-if="loading == false">
+                        <tr ng-repeat="row in rows ">
+                            <td>{{row.nombre}}</td>
+                            <td>{{row.ruc}}</td>
+                            <td>{{row.telefono}}</td>
+                            <td>{{row.activo| sino}}</td>
+                            <td>{{row.fechaCreacion | date : 'dd-MM-yyyy'}}</td>
+                            <td>
+                                <a href="#!/empresas/{{row.id}}/ver">
+                                    <i class="fa fa-eye"></i> Ver
+                                </a>
+                                &nbsp;
+                                <a href="#!/empresas/{{row.id}}/editar">
+                                    <i class="fa fa-pencil-square-o"></i> Editar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr ng-if="loading == true">
+                            <td colspan="6">
+                                <loading></loading>
+                            </td>
+                        </tr>
+                        <tr ng-if="loading == null">
+                            <td colspan="6">
+                                <no-data></no-data>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="tasty-pagination-responsive" tasty-pagination></div>
+            </div>
+            <hr/>
+            <a class="btn btn-default" href="#!/empresas/crear"><i class="fa fa-plus"></i> Agregar</a>
+        </section>
+    </section>
+</div>
