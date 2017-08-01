@@ -17,18 +17,10 @@
 package py.pol.una.ii.pw.data;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-import java.util.List;
-
-import py.pol.una.ii.pw.model.Member;
 
 @ApplicationScoped
 public class MemberRepository {
-
+/*
     @Inject
     private EntityManager em;
 
@@ -56,5 +48,5 @@ public class MemberRepository {
         // criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
         criteria.select(member).orderBy(cb.asc(member.get("name")));
         return em.createQuery(criteria).getResultList();
-    }
+    }*/
 }
