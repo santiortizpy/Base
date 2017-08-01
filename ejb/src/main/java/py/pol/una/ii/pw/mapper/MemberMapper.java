@@ -13,7 +13,7 @@ public interface MemberMapper {
 	
 	 @Select({
 	        "select",
-	        "id, nname, email, phoneNumbre",
+	        "id, name, email, phonenumber",
 	        "from MEMBER",
 	        "where id = #{id,jdbcType=DECIMAL}"
 	    })
@@ -21,7 +21,7 @@ public interface MemberMapper {
 	        @Result(column="id", property="id", jdbcType=JdbcType.DECIMAL, id=true),
 	        @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
 	        @Result(column="email", property="email", jdbcType=JdbcType.VARCHAR),
-	        @Result(column="phoneNumber", property="phoneNumber", jdbcType=JdbcType.VARCHAR),
+	        @Result(column="phonenumber", property="phoneNumber", jdbcType=JdbcType.VARCHAR),
 	        
 	    })
 	    Member selectByPrimaryKey(Long long1);

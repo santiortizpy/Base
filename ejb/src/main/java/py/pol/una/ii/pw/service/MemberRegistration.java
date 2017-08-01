@@ -16,10 +16,8 @@
  */
 package py.pol.una.ii.pw.service;
 
-import java.util.List;
 import java.util.logging.Logger;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -27,36 +25,35 @@ import org.apache.ibatis.session.SqlSession;
 
 import py.pol.una.ii.pw.mapper.MemberMapper;
 import py.pol.una.ii.pw.model.Member;
-import py.pol.una.ii.pw.util.EjemploSessionFactoryWrapper;
+import py.pol.una.ii.pw.util.MyBatisUtil;
 
 // The @Stateless annotation eliminates the need for manual transaction demarcation
 @Stateless
 public class MemberRegistration {
 
-    @Inject
-    private Logger log;
+   /* @Inject
+    private Logger log;*/
 
    /* @Inject
     private EntityManager em;*/
     
-    @EJB
-    private EjemploSessionFactoryWrapper factory;
+   
 
    
 
     public Member findById(Long member) throws Exception {
     	SqlSession sesion = null;
     	try {
-    		sesion = factory.getSqlSession();
+    		sesion = MyBatisUtil.getSqlSessionFactory().openSession();
     		MemberMapper mapper = sesion.getMapper(MemberMapper.class);
     		Member encontrado = mapper.selectByPrimaryKey(member);
     		//SosUmbralesSegmentacionMapper mapper = sesion.getMapper(SosUmbralesSegmentacionMapper.class);
 			//SosUmbralesSegmentacion encontrado = mapper.selectByPrimaryKey(sosUmbral);
-        log.info("Registering " + encontrado.getName());
+       
        //em.persist(member);
        return encontrado;
     	} catch (Exception e) {
-			throw new Exception();
+			throw new Exception(e.getMessage());
 		} finally {
 			sesion.close();
 		}

@@ -52,11 +52,11 @@ import py.pol.una.ii.pw.service.MemberRegistration;
 @Path("/members")
 @RequestScoped
 public class MemberResourceRESTService {
-    @Inject
-    private Logger log;
+   /* @Inject
+    private Logger log;*/
 
-    @Inject
-    private Validator validator;
+  /*  @Inject
+    private Validator validator;*/
 
     /*@Inject
     private MemberRepository repository;*/
@@ -153,7 +153,7 @@ public class MemberResourceRESTService {
      * @param violations A set of violations that needs to be reported
      * @return JAX-RS response containing all violations
      */
-    private Response.ResponseBuilder createViolationResponse(Set<ConstraintViolation<?>> violations) {
+   /* private Response.ResponseBuilder createViolationResponse(Set<ConstraintViolation<?>> violations) {
         log.fine("Validation completed. violations found: " + violations.size());
 
         Map<String, String> responseObj = new HashMap<String, String>();
@@ -163,7 +163,7 @@ public class MemberResourceRESTService {
         }
 
         return Response.status(Response.Status.BAD_REQUEST).entity(responseObj);
-    }
+    }*/
 
     /**
      * Checks if a member with the same email address is already registered. This is the only way to easily capture the

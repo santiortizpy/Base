@@ -61,7 +61,7 @@
    <dependency>
   <groupId>org.mybatis</groupId>
   <artifactId>mybatis</artifactId>
-  <version>3.2.2</version>
+  <version>3.2.5</version>
 </dependency>
 
         <!-- Import the JPA API, we use provided scope as the API is included in JBoss AS 7 -->
