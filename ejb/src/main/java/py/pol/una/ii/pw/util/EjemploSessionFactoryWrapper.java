@@ -21,15 +21,10 @@ public class EjemploSessionFactoryWrapper  extends SessionFactoryWrapper {
 		return "mybatis/configuraciones/MyBatisConfiguration.xml";
 	}
 	
-	@Produces
-	@RequestScoped
+	
 	public SqlSession getMyBatisSqlSession() {
 		return getSqlSession();
 	}
 	
-	public void releaseMyBatisSqlSession(@Disposes SqlSession session) {
-		if (session!=null) {
-			session.close();
-		}
-	}
+	
 }
